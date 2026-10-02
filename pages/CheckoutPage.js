@@ -27,7 +27,7 @@ class CheckoutPage {
         await this.lastNameInput.fill(lastName);
         await this.postalCodeInput.fill(postalCode);
     }
-
+s
     async clickContinue() {
         await this.continueButton.click();
     }

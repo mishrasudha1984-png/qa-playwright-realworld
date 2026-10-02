@@ -1,7 +1,8 @@
 const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
-    testDir: './tests',
+    //testDir: './tests',
+    testDir: '.',
 
     fullyParallel: true,
 
@@ -48,6 +49,7 @@ module.exports = defineConfig({
         },
         dependencies: ['setup'],
     },
+    
 
     // Authenticated Firefox tests
     {
@@ -70,5 +72,12 @@ module.exports = defineConfig({
         },
         dependencies: ['setup'],
     },
+
+    // Api tests
+
+{
+    name: 'api',
+    testDir: './api-tests',
+},
 ],
 });
