@@ -10,7 +10,12 @@ module.exports = defineConfig({
 
     workers: process.env.CI ? 1 : undefined,
 
-    reporter: 'html',
+    reporter: [
+    ['html'],
+    ['allure-playwright']
+],
+
+
 
     use: {
         baseURL: 'https://www.saucedemo.com',
